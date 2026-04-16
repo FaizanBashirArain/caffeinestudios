@@ -61,9 +61,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.09;
+  opacity: 0.04;
   background:
-    linear-gradient(180deg, rgba(4, 10, 18, 0.28), rgba(4, 10, 18, 0.64)),
+    linear-gradient(180deg, rgba(4, 10, 18, 0.42), rgba(4, 10, 18, 0.76)),
     url("Logo/cs.png") center top / 110% auto no-repeat;
 }
 
