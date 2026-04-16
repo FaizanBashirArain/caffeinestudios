@@ -60,7 +60,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   opacity: 0.05;
   background:
     linear-gradient(180deg, rgba(4, 10, 18, 0.5), rgba(4, 10, 18, 0.82)),
@@ -109,6 +109,8 @@ select {
 
 .site-shell {
   overflow: clip;
+  position: relative;
+  z-index: 1;
 }
 
 .container {
