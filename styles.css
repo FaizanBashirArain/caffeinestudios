@@ -173,7 +173,10 @@ select {
 
 .brand-text strong,
 .hero h1,
+.policy-intro h1,
 .section-heading h2,
+.policy-summary h2,
+.policy-card h2,
 .stage-stats strong,
 .project-surface h3,
 .showcase-card h3,
@@ -265,6 +268,9 @@ select {
 }
 
 .hero-text,
+.policy-intro p,
+.policy-card p,
+.policy-summary li,
 .section-heading p,
 .project-surface p,
 .showcase-card p,
@@ -783,6 +789,105 @@ select {
   gap: 1rem;
 }
 
+.policy-hero {
+  padding-top: calc(var(--space-8) + 1rem);
+  padding-bottom: var(--space-6);
+}
+
+.policy-intro {
+  max-width: 54rem;
+}
+
+.policy-intro h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.policy-intro p {
+  max-width: 46rem;
+  margin: 1.4rem 0 0;
+  font-size: 1.08rem;
+}
+
+.policy-updated {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+.policy-section {
+  padding-top: 0;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.35fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.policy-summary,
+.policy-card {
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md);
+}
+
+.policy-summary {
+  position: sticky;
+  top: 6.5rem;
+  padding: 1.5rem;
+}
+
+.policy-summary h2,
+.policy-card h2 {
+  margin: 0;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.policy-summary h2 {
+  font-size: 1.35rem;
+}
+
+.policy-summary ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.policy-summary li + li {
+  margin-top: 0.75rem;
+}
+
+.policy-card {
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+}
+
+.policy-card section + section {
+  margin-top: 2.2rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.policy-card h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.policy-card p {
+  margin: 1rem 0 0;
+}
+
+.policy-card a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.policy-card a:hover {
+  color: var(--text);
+}
+
 .site-footer {
   padding: 2rem 0 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -854,8 +959,13 @@ select {
   .about-grid,
   .contact-grid,
   .split-intro,
+  .policy-layout,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .policy-summary {
+    position: static;
   }
 
   .trust-items {
@@ -918,6 +1028,10 @@ select {
 
   .hero h1 {
     max-width: none;
+  }
+
+  .policy-hero {
+    padding-top: 5rem;
   }
 
   .stage-card {
