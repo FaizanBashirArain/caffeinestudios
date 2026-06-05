@@ -661,6 +661,21 @@ select {
     linear-gradient(135deg, #102a37, #111723);
 }
 
+.app-surface {
+  background-image:
+    linear-gradient(180deg, rgba(8, 12, 20, 0.08), rgba(7, 11, 18, 0.94)),
+    radial-gradient(circle at 18% 18%, rgba(245, 204, 132, 0.28), transparent 22%),
+    linear-gradient(135deg, #2b2316, #111722);
+}
+
+.quest-surface {
+  background-image:
+    linear-gradient(180deg, rgba(8, 12, 20, 0.08), rgba(7, 11, 18, 0.94)),
+    radial-gradient(circle at 18% 20%, rgba(255, 154, 98, 0.28), transparent 23%),
+    radial-gradient(circle at 82% 18%, rgba(122, 240, 210, 0.24), transparent 22%),
+    linear-gradient(135deg, #251b19, #101824);
+}
+
 .project-surface h3,
 .showcase-card h3 {
   margin: 0;
