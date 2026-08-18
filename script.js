@@ -12,6 +12,19 @@ const heroVideo = document.querySelector(".hero-frame video");
 const copyButtons = document.querySelectorAll("[data-copy]");
 const toast = document.querySelector(".toast");
 const currentYear = document.querySelector("#current-year");
+const homeBrandLinks = document.querySelectorAll('.brand[href="#top"]');
+
+homeBrandLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    closeNavigation();
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+  });
+});
 
 const closeNavigation = () => {
   if (!navToggle || !siteNav) return;

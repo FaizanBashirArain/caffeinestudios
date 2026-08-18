@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Caffeine Studios VR headset mark</title>
+  <defs>
+    <linearGradient id="surface" x1="8" y1="6" x2="57" y2="59" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172330" />
+      <stop offset="0.55" stop-color="#0B1018" />
+      <stop offset="1" stop-color="#080B10" />
+    </linearGradient>
+    <linearGradient id="visor" x1="17" y1="25" x2="48" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C9FF3D" />
+      <stop offset="1" stop-color="#38D9FF" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#surface)" stroke="#C9FF3D" stroke-width="2" />
+  <path d="M13 32.5C13 23.9 19.9 17 28.5 17h7C44.1 17 51 23.9 51 32.5v6.2c0 4.6-3.7 8.3-8.3 8.3-3 0-5.7-1.6-7.2-4.2l-1.1-1.9h-4.8l-1.1 1.9a8.3 8.3 0 0 1-15.5-4.1v-6.2Z" fill="#0B1018" stroke="#F4F7FB" stroke-width="2.8" stroke-linejoin="round" />
+  <path d="M17.5 29.5 29 27.8v8.7l-11.5-1.2v-5.8Zm29 0L35 27.8v8.7l11.5-1.2v-5.8Z" fill="url(#visor)" />
+  <path d="M29 32.1h6" stroke="#F4F7FB" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M22 15.5c1.2-2.7 3-4.4 5.6-5.3M30.2 14.5c.9-2 2.2-3.2 4.1-3.8" stroke="#38D9FF" stroke-width="2.2" stroke-linecap="round" />
+  <circle cx="47.5" cy="17" r="2.5" fill="#C9FF3D" />
+</svg>

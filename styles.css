@@ -148,15 +148,24 @@ summary:focus-visible {
   flex: 0 0 auto;
   place-items: center;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 255, 61, 0.24);
   border-radius: 0.85rem;
-  background: #111722;
+  background: #0b1018;
+  box-shadow: 0 0 1.25rem rgba(56, 217, 255, 0.08);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .brand-mark img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.brand:hover .brand-mark,
+.brand:focus-visible .brand-mark {
+  border-color: rgba(201, 255, 61, 0.68);
+  box-shadow: 0 0 1.5rem rgba(56, 217, 255, 0.18);
+  transform: translateY(-1px);
 }
 
 .brand-text {
