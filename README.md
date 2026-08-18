@@ -1,36 +1,37 @@
-# Caffeine Studios Website
+# Caffeine Studios — Meta Quest VR Portfolio
 
-Static company website for Caffeine Studios, built with plain HTML, CSS, and JavaScript.
+Static portfolio website for Faizan Bashir and Caffeine Studios, focused on professional Meta Quest VR game development.
 
-## Files
+## Site content
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `Logo/blob.png`
-- `Logo/cs.png`
+- 13 original Meta Quest games published on the Meta Horizon Store
+- Local gameplay images and on-demand video playback for every product
+- Client VR development services and delivery process
+- Direct contact links for email, WhatsApp, LinkedIn, Fiverr, Upwork, and Discord
+- Individual product privacy-policy pages
 
-## GitHub Pages Publishing
+## Structure
 
-Recommended production URL:
+- `index.html` — main portfolio
+- `styles.css` — shared responsive visual system
+- `script.js` — navigation, scroll reveals, video dialog, and contact interactions
+- `assets/products/` — product screenshots and gameplay videos
+- `Logo/` — Caffeine Studios identity assets
+- `*-privacy-policy.html` and `privacy-policy.html` — product policies
 
-- `https://caffeinestudios.github.io`
+The media gallery uses lazy-loaded poster images and only loads a product video after a visitor chooses **Watch gameplay**. The hero reel is the only autoplaying video and is muted, looping, and inline.
 
-To publish this on GitHub Pages:
+## Local preview
 
-1. Create a GitHub repository named `caffeinestudios.github.io`
-2. Upload the contents of this project to the root of that repository
-3. Push to the `main` branch
-4. In GitHub, open `Settings > Pages`
-5. Set `Build and deployment` to `Deploy from a branch`
-6. Select `main` and `/ (root)`
-7. Save and wait for deployment
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
+```
 
-If `caffeinestudios.github.io` is not available, use a project repo instead and publish from:
+Open `http://127.0.0.1:4173/`.
 
-- `https://<your-github-username>.github.io/caffeinestudios`
+## Live deployments
 
-## Notes
+- `https://faizanbashirarain.github.io/caffeinestudios/`
+- `https://faizanbashirarain.github.io/caffeinestudios.github.io/`
 
-- `.nojekyll` is included so GitHub Pages serves the site as a plain static site with no Jekyll processing.
-- `.gitignore` excludes `.DS_Store`.
+Both GitHub Pages repositories are kept in sync for public releases.
