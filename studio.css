@@ -56,37 +56,20 @@
 
 .studio-text-link:hover { color: #f0ffcf; }
 
-.studio-hero-art, .capability-card figure {
+.studio-hero-art {
   position: relative;
-  margin: 0;
   overflow: hidden;
+  border-radius: 0 17px 17px 0;
   background: #233328;
 }
 
-.studio-hero-art { border-radius: 0 17px 17px 0; }
-
-.studio-hero-art img, .capability-card img {
+.studio-hero-art img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
-
-.studio-hero-art img { position: absolute; }
-
-.studio-hero-art figcaption, .capability-card figcaption {
-  position: absolute;
-  right: .7rem;
-  bottom: .7rem;
-  padding: .27rem .6rem;
-  border: 1px solid #59695b;
-  border-radius: 5px;
-  background: #101914f5;
-  color: #edf5eb;
-  font-size: .75rem;
-  font-weight: 600;
-}
-
-.studio-hero-art figcaption span { margin-inline: .1rem; color: var(--acid); }
 
 .studio-intro + .studio-section { padding-bottom: 0; }
 
@@ -102,15 +85,9 @@
 }
 
 .capability-card {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(.85rem, 1.6vw, 1.3rem);
 }
-
-.capability-card figure { aspect-ratio: 16 / 8; }
-
-.capability-copy { padding: clamp(.95rem, 2vw, 1.45rem); }
 
 .capability-copy h3, .hire-options h3 {
   margin-bottom: .35rem;
@@ -144,6 +121,28 @@
 .hire-intro p {
   max-width: 26ch;
   margin-block: .7rem 1.2rem;
+}
+
+.hire-email a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.hire-email strong, .hire-email span { display: block; }
+
+.hire-email span {
+  margin-top: .18rem;
+  color: var(--acid);
+  font-size: .92rem;
+  text-decoration: underline;
+  text-underline-offset: .24em;
+}
+
+.hire-email button {
+  margin-top: .65rem;
+  cursor: pointer;
 }
 
 .hire-options {
@@ -187,7 +186,7 @@
   .studio-hero, .hire-panel { grid-template-columns: 1fr; }
   .studio-hero-art {
     grid-row: 1;
-    aspect-ratio: 16 / 8;
+    aspect-ratio: 4 / 3;
     border-radius: 17px 17px 0 0;
   }
   .studio-intro-copy h1 { max-width: 17ch; }

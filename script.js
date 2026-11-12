@@ -145,8 +145,9 @@ if (videoDialog) {
 
 let toastTimer;
 
-const showToast = () => {
+const showToast = (message) => {
   if (!toast) return;
+  toast.textContent = message;
   toast.classList.add("is-visible");
   window.clearTimeout(toastTimer);
   toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 2200);
@@ -165,8 +166,11 @@ const copyText = async (value) => {
   temporaryInput.style.opacity = "0";
   document.body.appendChild(temporaryInput);
   temporaryInput.select();
-  document.execCommand("copy");
-  temporaryInput.remove();
+  try {
+    if (!document.execCommand("copy")) throw new Error("Copy unavailable");
+  } finally {
+    temporaryInput.remove();
+  }
 };
 
 copyButtons.forEach((button) => {
@@ -180,9 +184,9 @@ copyButtons.forEach((button) => {
           status.textContent = "Copy";
         }, 2200);
       }
-      showToast();
+      showToast(button.dataset.copyFeedback || "Discord username copied");
     } catch {
-      window.prompt("Copy Discord username:", button.dataset.copy);
+      window.prompt(button.dataset.copyPrompt || "Copy Discord username", button.dataset.copy);
     }
   });
 });
