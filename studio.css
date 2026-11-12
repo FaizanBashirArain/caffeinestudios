@@ -123,25 +123,39 @@
   margin-block: .7rem 1.2rem;
 }
 
-.hire-email a {
-  display: block;
-  color: var(--ink);
-  text-decoration: none;
+.hire-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .92rem;
+}
+
+.hire-contacts li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .2rem .65rem;
+  padding: .6rem 0 .7rem;
+  border-top: 1px solid var(--line);
+}
+
+.hire-contacts li > :is(a, span) {
+  grid-column: 1 / -1;
+  color: var(--muted);
   overflow-wrap: anywhere;
 }
 
-.hire-email strong, .hire-email span { display: block; }
-
-.hire-email span {
-  margin-top: .18rem;
+.hire-contacts li > a {
   color: var(--acid);
-  font-size: .92rem;
-  text-decoration: underline;
   text-underline-offset: .24em;
 }
 
-.hire-email button {
-  margin-top: .65rem;
+.hire-contacts button {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 34px;
+  padding: .25rem .55rem;
+  font-size: .79rem;
   cursor: pointer;
 }
 
@@ -180,7 +194,7 @@
   gap: .4rem 1.4rem;
 }
 
-.studio-footer .contact-links { flex: 0 1 auto; }
+.studio-footer a { text-underline-offset: .22em; }
 
 @media (max-width: 780px) {
   .studio-hero, .hire-panel { grid-template-columns: 1fr; }

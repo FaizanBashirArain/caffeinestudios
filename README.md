@@ -7,7 +7,7 @@ Static portfolio website for Faizan Bashir and Caffeine Studios, focused on prof
 - 13 original Meta Quest games published on the Meta Horizon Store
 - Local gameplay images and on-demand video playback for every product
 - Client VR development services and delivery process
-- Direct contact links for email, WhatsApp, LinkedIn, Fiverr, Upwork, and Discord
+- Direct contact links for email, WhatsApp, Fiverr, Upwork, and Discord
 - Individual product privacy-policy pages
 
 ## Structure
