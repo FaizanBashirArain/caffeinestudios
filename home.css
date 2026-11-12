@@ -107,7 +107,7 @@ img { display: block; max-width: 100%; }
   text-underline-offset: .25em;
 }
 
-.site-nav a:hover { text-decoration: underline; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; }
 
 .site-nav .nav-contact {
   display: inline-flex;
@@ -240,7 +240,7 @@ img { display: block; max-width: 100%; }
   margin-bottom: .45rem;
 }
 
-.section-heading h2, .studio-panel h2, .contact-panel h2 {
+.section-heading h2 {
   font-size: clamp(2rem, 4.15vw, 3.75rem);
   font-weight: 700;
   letter-spacing: -.048em;
@@ -380,58 +380,33 @@ img { display: block; max-width: 100%; }
 
 .studio-section { padding-bottom: clamp(3rem, 6vw, 5.2rem); }
 
-.studio-panel {
-  display: grid;
-  grid-template-columns: 1.14fr .86fr;
-  gap: clamp(1.4rem, 6vw, 6rem);
-  align-items: center;
-  padding: clamp(1.5rem, 4.8vw, 4.4rem);
-  border: 1px solid var(--line);
-  border-radius: 14px 14px 0 0;
-  background: #1d2a21;
-}
-
-.studio-panel h2 { max-width: 13ch; }
-
-.studio-panel h2 + p {
-  max-width: 54ch;
-  margin-top: .95rem;
-  color: #bdc9bc;
-}
-
-.studio-services h3 {
-  margin-bottom: .45rem;
-  font-size: 1.13rem;
-  letter-spacing: -.025em;
-}
-
-.studio-services ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.studio-services li {
-  padding: .75rem 0;
-  border-bottom: 1px solid #415446;
-}
-
-.contact-panel {
+.studio-callout {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: .85rem 1.4rem;
-  padding: 1.15rem clamp(1.5rem, 4.8vw, 4.4rem) 1.3rem;
+  gap: 1.2rem 2rem;
+  padding: clamp(1.35rem, 3.4vw, 2.6rem);
   border: 1px solid var(--line);
-  border-top: 0;
-  border-radius: 0 0 14px 14px;
-  background: var(--surface);
+  border-radius: 14px;
+  background: var(--forest);
 }
 
-.contact-panel h2 {
-  flex: 1 0 auto;
-  font-size: clamp(1.35rem, 2.8vw, 2rem);
+.studio-callout h2 {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.studio-callout p {
+  margin-top: .4rem;
+  color: var(--muted);
+}
+
+.studio-callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
 }
 
 .button-dark {
@@ -600,7 +575,6 @@ body.has-dialog { overflow: hidden; }
   .feature h1 { margin-block: .7rem; font-size: clamp(2.4rem, 8vw, 3.65rem); }
   .feature-description { max-width: 35ch; margin-bottom: 1rem; }
   .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .studio-panel { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 390px) {
