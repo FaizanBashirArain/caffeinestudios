@@ -13,6 +13,30 @@ const copyButtons = document.querySelectorAll("[data-copy]");
 const toast = document.querySelector(".toast");
 const currentYear = document.querySelector("#current-year");
 const homeBrandLinks = document.querySelectorAll('.brand[href="#top"]');
+const gameFilters = document.querySelector(".game-filters");
+
+if (gameFilters) {
+  const filterButtons = gameFilters.querySelectorAll("[data-filter]");
+  const games = document.querySelectorAll(".game-card[data-genre]");
+  const results = document.querySelector("#game-results");
+
+  gameFilters.hidden = false;
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      let visibleCount = 0;
+
+      filterButtons.forEach((filterButton) => {
+        filterButton.setAttribute("aria-pressed", String(filterButton === button));
+      });
+      games.forEach((game) => {
+        game.hidden = filter !== "all" && game.dataset.genre !== filter;
+        if (!game.hidden) visibleCount += 1;
+      });
+      results.textContent = `${visibleCount} games shown`;
+    });
+  });
+}
 
 homeBrandLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
