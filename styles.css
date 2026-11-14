@@ -1,15 +1,15 @@
 :root {
-  --bg: #080b10;
-  --bg-soft: #0d1118;
-  --surface: #111720;
-  --surface-soft: #151c27;
-  --text: #f4f7fb;
-  --muted: #9aa6b5;
-  --muted-strong: #bdc7d3;
+  --bg: #141414;
+  --bg-soft: #1a1a1a;
+  --surface: #202020;
+  --surface-soft: #282522;
+  --text: #f7f1e8;
+  --muted: #c7bcb0;
+  --muted-strong: #ded3c7;
   --line: rgba(255, 255, 255, 0.1);
   --line-strong: rgba(255, 255, 255, 0.18);
-  --acid: #c9ff3d;
-  --cyan: #38d9ff;
+  --acid: #ffad49;
+  --cyan: #ffd199;
   --purple: #9c82ff;
   --warm: #ff865d;
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
@@ -36,8 +36,8 @@ body {
   min-width: 320px;
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 3%, rgba(56, 217, 255, 0.1), transparent 24rem),
-    radial-gradient(circle at 87% 8%, rgba(201, 255, 61, 0.07), transparent 24rem),
+    radial-gradient(circle at 12% 3%, rgba(255, 172, 73, 0.1), transparent 24rem),
+    radial-gradient(circle at 87% 8%, rgba(255, 156, 41, 0.07), transparent 24rem),
     var(--bg);
   font-family: "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
@@ -74,7 +74,7 @@ summary:focus-visible {
 }
 
 ::selection {
-  color: #10140a;
+  color: #211409;
   background: var(--acid);
 }
 
@@ -85,7 +85,7 @@ summary:focus-visible {
   z-index: 1000;
   border-radius: 999px;
   padding: 0.8rem 1rem;
-  color: #0c1104;
+  color: #211409;
   background: var(--acid);
   font-weight: 800;
   transition: top var(--transition);
@@ -116,14 +116,14 @@ summary:focus-visible {
   inset: 0 0 auto;
   z-index: 50;
   border-bottom: 1px solid transparent;
-  background: rgba(8, 11, 16, 0.68);
+  background: rgba(20, 20, 20, 0.68);
   backdrop-filter: blur(18px);
   transition: border-color var(--transition), background var(--transition);
 }
 
 .site-header.is-scrolled {
   border-bottom-color: var(--line);
-  background: rgba(8, 11, 16, 0.9);
+  background: rgba(20, 20, 20, 0.9);
 }
 
 .header-inner {
@@ -148,10 +148,10 @@ summary:focus-visible {
   flex: 0 0 auto;
   place-items: center;
   overflow: hidden;
-  border: 1px solid rgba(201, 255, 61, 0.24);
+  border: 1px solid rgba(255, 156, 41, 0.24);
   border-radius: 0.85rem;
-  background: #0b1018;
-  box-shadow: 0 0 1.25rem rgba(56, 217, 255, 0.08);
+  background: #171513;
+  box-shadow: 0 0 1.25rem rgba(255, 172, 73, 0.08);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -163,8 +163,8 @@ summary:focus-visible {
 
 .brand:hover .brand-mark,
 .brand:focus-visible .brand-mark {
-  border-color: rgba(201, 255, 61, 0.68);
-  box-shadow: 0 0 1.5rem rgba(56, 217, 255, 0.18);
+  border-color: rgba(255, 156, 41, 0.68);
+  box-shadow: 0 0 1.5rem rgba(255, 172, 73, 0.18);
   transform: translateY(-1px);
 }
 
@@ -223,8 +223,8 @@ h3,
 }
 
 .site-nav .nav-cta:hover {
-  border-color: rgba(201, 255, 61, 0.48);
-  background: rgba(201, 255, 61, 0.08);
+  border-color: rgba(255, 156, 41, 0.48);
+  background: rgba(255, 156, 41, 0.08);
 }
 
 .nav-toggle {
@@ -299,7 +299,7 @@ h3,
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--acid);
-  box-shadow: 0 0 0 0.25rem rgba(201, 255, 61, 0.1), 0 0 1.25rem rgba(201, 255, 61, 0.4);
+  box-shadow: 0 0 0 0.25rem rgba(255, 156, 41, 0.1), 0 0 1.25rem rgba(255, 156, 41, 0.4);
 }
 
 .eyebrow {
@@ -373,11 +373,11 @@ em {
 .button-primary {
   color: #111607;
   background: var(--acid);
-  box-shadow: 0 14px 36px rgba(201, 255, 61, 0.15);
+  box-shadow: 0 14px 36px rgba(255, 156, 41, 0.15);
 }
 
 .button-primary:hover {
-  box-shadow: 0 18px 44px rgba(201, 255, 61, 0.24);
+  box-shadow: 0 18px 44px rgba(255, 156, 41, 0.24);
 }
 
 .button-secondary {
@@ -480,7 +480,7 @@ em {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(8, 11, 16, 0.66);
+  background: rgba(20, 20, 20, 0.66);
   backdrop-filter: blur(12px);
 }
 
@@ -615,7 +615,7 @@ em {
 .games-section {
   background:
     linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.018) 20%, transparent 80%),
-    radial-gradient(circle at 50% 15%, rgba(56, 217, 255, 0.05), transparent 30rem);
+    radial-gradient(circle at 50% 15%, rgba(255, 172, 73, 0.05), transparent 30rem);
 }
 
 .section-heading {
@@ -748,7 +748,7 @@ em {
 .store-status i {
   width: 0.3rem;
   height: 0.3rem;
-  box-shadow: 0 0 0.7rem rgba(201, 255, 61, 0.55);
+  box-shadow: 0 0 0.7rem rgba(255, 156, 41, 0.55);
 }
 
 .play-button {
@@ -851,8 +851,8 @@ em {
 }
 
 .game-links .store-link:hover {
-  border-color: rgba(201, 255, 61, 0.32);
-  background: rgba(201, 255, 61, 0.06);
+  border-color: rgba(255, 156, 41, 0.32);
+  background: rgba(255, 156, 41, 0.06);
 }
 
 .game-card-wide {
@@ -897,8 +897,8 @@ em {
   min-height: 34rem;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   background:
-    linear-gradient(145deg, rgba(201, 255, 61, 0.1), transparent 45%),
-    radial-gradient(circle at 100% 100%, rgba(56, 217, 255, 0.12), transparent 45%),
+    linear-gradient(145deg, rgba(255, 156, 41, 0.1), transparent 45%),
+    radial-gradient(circle at 100% 100%, rgba(255, 172, 73, 0.12), transparent 45%),
     var(--surface);
 }
 
@@ -907,10 +907,10 @@ em {
   width: 3.1rem;
   height: 3.1rem;
   place-items: center;
-  border: 1px solid rgba(201, 255, 61, 0.25);
+  border: 1px solid rgba(255, 156, 41, 0.25);
   border-radius: 50%;
   color: var(--acid);
-  background: rgba(201, 255, 61, 0.06);
+  background: rgba(255, 156, 41, 0.06);
   font-family: "Manrope", sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
@@ -1103,8 +1103,8 @@ em {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 70% 26%, rgba(56, 217, 255, 0.22), transparent 24%),
-    radial-gradient(circle at 30% 70%, rgba(201, 255, 61, 0.15), transparent 30%),
+    radial-gradient(circle at 70% 26%, rgba(255, 172, 73, 0.22), transparent 24%),
+    radial-gradient(circle at 30% 70%, rgba(255, 156, 41, 0.15), transparent 30%),
     linear-gradient(145deg, #151b26, #0b1017);
   box-shadow: var(--shadow);
 }
@@ -1271,7 +1271,7 @@ em {
 
 .contact-section {
   background:
-    radial-gradient(circle at 82% 50%, rgba(56, 217, 255, 0.09), transparent 25rem),
+    radial-gradient(circle at 82% 50%, rgba(255, 172, 73, 0.09), transparent 25rem),
     var(--bg);
 }
 
@@ -1284,7 +1284,7 @@ em {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(145deg, rgba(201, 255, 61, 0.07), transparent 35%),
+    linear-gradient(145deg, rgba(255, 156, 41, 0.07), transparent 35%),
     var(--surface);
   box-shadow: var(--shadow);
 }
@@ -1342,7 +1342,7 @@ em {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #070a0e;
+  background: #101010;
 }
 
 .footer-top,
@@ -1425,7 +1425,7 @@ em {
 
 .footer-bottom p {
   margin-bottom: 0;
-  color: #66717e;
+  color: #a69a8d;
   font-size: 0.72rem;
 }
 
@@ -1499,9 +1499,9 @@ em {
   right: 1.25rem;
   bottom: 1.25rem;
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(201, 255, 61, 0.3);
+  border: 1px solid rgba(255, 156, 41, 0.3);
   border-radius: 999px;
-  color: #121707;
+  color: #211409;
   background: var(--acid);
   font-size: 0.76rem;
   font-weight: 800;
@@ -1532,7 +1532,7 @@ em {
 .policy-hero {
   padding-top: 11rem;
   padding-bottom: 4rem;
-  background: radial-gradient(circle at 20% 0%, rgba(56, 217, 255, 0.1), transparent 30rem);
+  background: radial-gradient(circle at 20% 0%, rgba(255, 172, 73, 0.1), transparent 30rem);
 }
 
 .policy-intro {
@@ -1662,7 +1662,7 @@ em {
 
 .footer-note {
   margin-bottom: 0;
-  color: #687482;
+  color: #a69a8d;
   font-size: 0.75rem;
   line-height: 1.65;
 }
@@ -1722,7 +1722,7 @@ em {
     padding: 0.75rem;
     border: 1px solid var(--line);
     border-radius: 1rem;
-    background: rgba(10, 14, 20, 0.98);
+    background: rgba(24, 23, 22, 0.98);
     box-shadow: var(--shadow);
   }
 

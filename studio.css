@@ -6,7 +6,7 @@
   min-height: 26rem;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: var(--forest);
+  background: var(--panel);
 }
 
 .studio-intro-copy {
@@ -17,7 +17,7 @@
   padding: clamp(1.5rem, 4.5vw, 4rem);
 }
 
-.studio-intro-copy .eyebrow { color: var(--acid); }
+.studio-intro-copy .eyebrow { color: var(--accent); }
 
 .studio-intro-copy h1 {
   max-width: 16ch;
@@ -30,7 +30,7 @@
 
 .studio-intro-copy > p:not(.eyebrow) {
   max-width: 38ch;
-  color: #d7e4d7;
+  color: #ded3c7;
   font-size: clamp(1rem, 1.25vw, 1.12rem);
 }
 
@@ -47,20 +47,20 @@
   align-items: center;
   gap: .35rem;
   min-height: 36px;
-  color: var(--acid);
+  color: var(--accent);
   font-size: .9rem;
   font-weight: 700;
-  text-decoration-color: #83975d;
+  text-decoration-color: #976e48;
   text-underline-offset: .25em;
 }
 
-.studio-text-link:hover { color: #f0ffcf; }
+.studio-text-link:hover { color: #ffbc62; }
 
 .studio-hero-art {
   position: relative;
   overflow: hidden;
   border-radius: 0 17px 17px 0;
-  background: #233328;
+  background: #292421;
 }
 
 .studio-hero-art img {
@@ -108,7 +108,7 @@
 
 .hire-intro {
   padding: clamp(1.35rem, 3.5vw, 3rem);
-  background: #1d2a21;
+  background: #2a231f;
   border-radius: 13px 0 0 13px;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .hire-contacts li > a {
-  color: var(--acid);
+  color: var(--accent);
   text-underline-offset: .24em;
 }
 
